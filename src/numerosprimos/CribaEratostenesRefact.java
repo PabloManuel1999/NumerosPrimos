@@ -27,12 +27,15 @@ class CribaEratostenesRefact {
         // el array a true.        
         Arrays.fill(esPrimo, true); 
         
+        // Eliminar el 0 y el 1, que no son primos
+        esPrimo[0] = esPrimo[1] = false;
+        
         // Se cambia el bucle for que elimina los múltiplos de i para que comienze en i*i 
         // y cualquier múltiplo menor se eliminará por un número anterior ' * '.       
-        for (int i = 2; i <= Math.sqrt(max); i++) { 
+        for (int i = 2; i < Math.sqrt(max + 1); i++) { 
             if (esPrimo[i]) {
                 // *
-                for (int j = i * i; j <= max; j += i) { 
+                for (int j = 2 * i; j < max + 1; j += i) { 
                     esPrimo[j] = false; 
                 } 
             }
@@ -44,18 +47,18 @@ class CribaEratostenesRefact {
         for (boolean b : esPrimo) { 
             if (b) 
                 numPrimos++; 
-        } 
+            }
         
-        // Cambiamos la variable j que esta dentro del bucle y la ponemos fuera
-        // y empezamos por i = 2 para saltarnos el 0 y 1 desde aqui, y no de la forma en la 
-        // que se implementa en el otro programa.       
+        // Cambiamos la variable j que esta dentro del bucle y la ponemos fuera.       
         int[] primos = new int[numPrimos]; 
         int j = 0;
-        for (int i = 2; i <= max; i++) { 
+        for (int i = 0; i < max + 1; i++) { 
             if (esPrimo[i]) {
-                primos[j++] = i; 
-            } 
+                primos[j++] = i;       
+            }
         } 
+        // Eliminar el 0 y el 1, que no son primos
+        esPrimo[0] = esPrimo[1] = false; 
         return primos; 
     }    
 }

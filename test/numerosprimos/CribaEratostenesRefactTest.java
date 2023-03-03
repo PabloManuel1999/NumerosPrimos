@@ -16,7 +16,7 @@ public class CribaEratostenesRefactTest {
     
     @Test
     public void testGenerarPrimosRefact1() {
-        System.out.println("generarPrimos1");
+        System.out.println("generarPrimosRefact1");
         int max = 0;
         int[] expResult = {};
         int[] result = CribaEratostenesRefact.generarPrimosRefact(max);
@@ -25,7 +25,7 @@ public class CribaEratostenesRefactTest {
     }
     @Test
     public void testGenerarPrimosRefact2() {
-        System.out.println("generarPrimos2");
+        System.out.println("generarPrimosRefact2");
         int max = 2;
         int[] expResult = {2};
         int[] result = CribaEratostenesRefact.generarPrimosRefact(max);
@@ -34,7 +34,7 @@ public class CribaEratostenesRefactTest {
     }
     @Test
     public void testGenerarPrimosRefact3() {
-        System.out.println("generarPrimos3");
+        System.out.println("generarPrimosRefact3");
         int max = 3;
         int[] expResult = {2, 3};
         int[] result = CribaEratostenesRefact.generarPrimosRefact(max);
@@ -43,7 +43,7 @@ public class CribaEratostenesRefactTest {
     }
     @Test
     public void testGenerarPrimosRefact4() {
-        System.out.println("generarPrimos4");
+        System.out.println("generarPrimosRefact4");
         int max = 100;
         int[] expResult = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 
                             47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
